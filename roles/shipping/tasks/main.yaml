@@ -1,0 +1,20 @@
+- name: appsetup
+  ansible.builtin.import_role:
+   name: common
+   tasks_from: maven
+
+- name: mysql-setup
+  ansible.builtin.import_role:
+   name: common
+   tasks_from: mysql-setup
+
+- name: systemd
+  ansible.builtin.import_role:
+   name: common
+   tasks_from: systemd
+
+- name: restart
+  ansible.builtin.service:
+   name: shipping
+   state: restarted
+
