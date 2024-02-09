@@ -3,10 +3,6 @@
    name: common
    tasks_from: appsetup
 
-- name: copy mongo repo
-  ansible.builtin.template:
-   src: mongo.repo.j2
-   dest: /etc/yum.repos.d/mongo.repo
 
 - name: replace config
   ansible.builtin.replace:
