@@ -1,6 +1,6 @@
 - name: copy mongo repo
   ansible.builtin.copy:
-   src: mongo.repo.j2
+   src: mongo.repo
    dest: /etc/yum.repos.d/mongo.repo
    remote_src: yes
 
